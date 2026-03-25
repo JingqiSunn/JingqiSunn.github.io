@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jingqi Sun</title>
+    <meta
+      name="description"
+      content="Personal website of Jingqi Sun, undergraduate researcher in audio intelligence and machine learning at SUSTech."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">Jingqi Sun</p>
+            <div class="profile-meta">
+              <p class="meta-line">Hometown: Ningbo, China</p>
+              <p class="meta-line">Current base: Shenzhen, Guangdong, China</p>
+              <p class="meta-line">Companion: Doudou the cat</p>
+              <ul class="profile-links" aria-label="Profile links">
+                <li><a href="mailto:jingqi.sun@outlook.com">Email</a></li>
+                <li><a href="https://scholar.google.com/citations?user=nc2CoAgAAAAJ&hl=en&oi=sra">Google Scholar</a></li>
+                <li><a href="https://github.com/JingqiSunn">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+          <figure class="portrait">
+            <img src="images/profile.jpg" alt="Portrait of Jingqi Sun" />
+          </figure>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Publications</h2>
+          <button
+            class="filter-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="publication-filters"
+          >
+            Show filters
+          </button>
+        </div>
+        <div class="filter-group" id="publication-filters" aria-label="Publication filters" hidden>
+          <div class="filter-row">
+            <span class="filter-label">Venue</span>
+            <button class="filter-chip is-active" type="button" data-filter-group="venue" data-filter-value="all">All</button>
+            <button class="filter-chip" type="button" data-filter-group="venue" data-filter-value="icassp">ICASSP</button>
+          </div>
+          <div class="filter-row">
+            <span class="filter-label">Year</span>
+            <button class="filter-chip is-active" type="button" data-filter-group="year" data-filter-value="all">All</button>
+            <button class="filter-chip" type="button" data-filter-group="year" data-filter-value="2026">2026</button>
+          </div>
+        </div>
+        <div class="publication-list">
+          <article class="paper-card" data-venue="icassp" data-year="2026">
+            <div class="paper-meta">
+              <p class="paper-badge">ICASSP 2026</p>
+              <p class="paper-year">2026</p>
+            </div>
+            <h3>Neural Forward Filtering for Speaker-Image Separation</h3>
+            <p class="paper-authors"><strong>Jingqi Sun</strong>, Shulin He, Ruizhe Pang, and Zhong-Qiu Wang</p>
+            <div class="button-row">
+              <a class="button" href="https://arxiv.org/abs/2510.05757">Paper</a>
+              <a class="button button-muted" href="https://github.com/JingqiSunn">Code</a>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" hidden>No publications match the selected filters.</p>
+      </section>
+
+      <section class="section info-section">
+        <h2>Research Interests</h2>
+        <p>Speech and audio processing, machine learning, source separation, and perceptual evaluation.</p>
+      </section>
+
+      <section class="section info-section">
+        <h2>Education</h2>
+        <article class="item">
+          <div class="item-head">
+            <h3>Southern University of Science and Technology</h3>
+            <p>Sep 2023 - Jun 2027 (expected)</p>
+          </div>
+          <p>B.S. in Computer Science and Technology, Turing Class.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
