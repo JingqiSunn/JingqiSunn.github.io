@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
   color: #1d1f1a;
+  background-color: #f7f1e6;
   background:
     radial-gradient(circle at top left, rgba(223, 173, 86, 0.16), transparent 28%),
     radial-gradient(circle at top right, rgba(72, 125, 117, 0.14), transparent 24%),
@@ -35,8 +36,10 @@ a:hover {
   padding: 36px;
   margin-bottom: 52px;
   border: 1px solid rgba(108, 96, 74, 0.4);
+  background-color: #fbf5ea;
   background:
-    linear-gradient(135deg, rgba(255, 252, 246, 0.88), rgba(247, 240, 226, 0.9)),
+    linear-gradient(135deg, rgba(255, 252, 246, 0.96), rgba(240, 228, 206, 0.98)),
+    radial-gradient(circle at top right, rgba(210, 165, 85, 0.22), transparent 34%),
     #fffdf9;
   box-shadow: 0 28px 80px rgba(77, 63, 41, 0.08);
 }
@@ -48,7 +51,7 @@ a:hover {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(214, 162, 68, 0.26), transparent 66%);
+  background: radial-gradient(circle, rgba(214, 162, 68, 0.34), transparent 66%);
   pointer-events: none;
 }
 
@@ -58,7 +61,7 @@ a:hover {
   inset: 0 auto auto 0;
   width: 180px;
   height: 180px;
-  background: linear-gradient(135deg, rgba(38, 91, 85, 0.14), transparent 70%);
+  background: linear-gradient(135deg, rgba(38, 91, 85, 0.24), transparent 70%);
   clip-path: polygon(0 0, 100% 0, 0 100%);
   pointer-events: none;
 }
@@ -185,9 +188,10 @@ h3 {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
   gap: 12px;
+  align-items: start;
 }
 
 .profile-links li {
@@ -195,11 +199,13 @@ h3 {
 }
 
 .profile-links a {
-  display: inline-block;
+  display: block;
+  min-width: 118px;
+  text-align: center;
   padding: 9px 14px;
   border: 1px solid rgba(29, 51, 47, 0.34);
   border-radius: 999px;
-  background: rgba(255, 252, 247, 0.8);
+  background: rgba(255, 252, 247, 0.92);
   text-decoration: none;
   transition:
     transform 180ms ease,
@@ -348,6 +354,14 @@ h3 {
   background: #ece7db;
 }
 
+.button-disabled {
+  border-color: #bbae9b;
+  color: #8b8375;
+  background: #f1ece1;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .empty-state {
   color: #6b6458;
 }
@@ -448,6 +462,7 @@ h3 {
   }
 
   .profile-links {
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
